@@ -12,7 +12,7 @@
     <TextView
         android:id="@+id/Username"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_marginTop="240dp"
         android:text="Username:"
         android:textSize="22dp"
@@ -22,9 +22,9 @@
 
     <EditText
         android:id="@+id/UsernameEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="233dp"
+        android:layout_width="215dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="240dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,9 +33,9 @@
 
     <TextView
         android:id="@+id/Password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
         android:text="Password:"
         android:textSize="22sp"
         app:layout_constraintEnd_toStartOf="@+id/PasswordEdit"
@@ -44,9 +44,9 @@
 
     <EditText
         android:id="@+id/PasswordEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
+        android:layout_width="215dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,11 +57,22 @@
         android:id="@+id/LoginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="25dp"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PasswordEdit" />
+
+    <TextView
+        android:id="@+id/RegisterNowText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Register Here"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,9 +8,19 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/FindButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        />
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Find" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:text="Chotes"
+        android:textSize="50dp" />
 </FrameLayout>

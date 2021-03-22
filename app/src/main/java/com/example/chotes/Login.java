@@ -17,7 +17,6 @@ public class Login extends AppCompatActivity {
     EditText eUsername, ePassword;
     TextView eRegisterNow;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

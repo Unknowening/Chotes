@@ -60,17 +60,36 @@ public class Profile extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        MainActivity activity = (MainActivity) getActivity();
+        String name = activity.getName();
+        String education = activity.getEducation();
+        String username = activity.getUsername();
+
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         eUsername = (EditText) view.findViewById(R.id.UsernameEdit);
         eName = (EditText) view.findViewById(R.id.NameEdit);
         eEducation = (EditText) view.findViewById(R.id.EducationEdit);
         bLogOut = (Button) view.findViewById(R.id.LogoutButton);
-        // Inflate the layout for this fragment
+
+        eName.setText("Name: " + name);
+        eEducation.setText("Education: " + education);
+        eUsername.setText("Username: " + username);
+
+        bLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Login.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 }

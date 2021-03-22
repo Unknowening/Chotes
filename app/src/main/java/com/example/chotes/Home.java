@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -68,7 +67,7 @@ public class Home extends Fragment {
         bFind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Home_Categories.class);
+                Intent intent = new Intent(getActivity(), Categories.class);
                 startActivity(intent);
             }
         });

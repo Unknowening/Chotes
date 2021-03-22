@@ -4,96 +4,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:padding="40dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/Name"
-        android:layout_width="120dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="50dp"
-        android:text="Name:"
-        android:textSize="22dp"
-        app:layout_constraintEnd_toStartOf="@+id/UsernameEdit"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/NameEdit"
-        android:layout_width="215dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Name"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/Username"
-        android:layout_width="120dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="32dp"
-        android:text="Username:"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="@+id/UsernameEdit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Name" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/UsernameEdit"
-        android:layout_width="215dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:ems="10"
+        android:hint="Username"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Username"
-        app:layout_constraintTop_toBottomOf="@+id/NameEdit" />
-
-    <TextView
-        android:id="@+id/Education"
-        android:layout_width="120dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="32dp"
-        android:text="Education:"
-        android:textSize="22dp"
-        app:layout_constraintEnd_toStartOf="@+id/UsernameEdit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Username" />
+        app:layout_constraintTop_toBottomOf="@+id/NameEdit" />
 
     <EditText
         android:id="@+id/EducationEdit"
-        android:layout_width="215dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:ems="10"
+        android:hint="Education"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Username"
-        app:layout_constraintTop_toBottomOf="@+id/UsernameEdit" />
-
-    <TextView
-        android:id="@+id/Password"
-        android:layout_width="120dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="32dp"
-        android:text="Password:"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toStartOf="@+id/PasswordEdit"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Education" />
+        app:layout_constraintTop_toBottomOf="@+id/UsernameEdit" />
 
     <EditText
         android:id="@+id/PasswordEdit"
-        android:layout_width="215dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:ems="10"
+        android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Password"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EducationEdit" />
 
     <Button

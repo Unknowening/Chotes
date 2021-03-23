@@ -17,7 +17,15 @@ public class MainActivity extends AppCompatActivity {
     private String name = "";
     private String username = "";
     private String education = "";
+    private String slot = "";
 
+    public void setSlot(String slot) {
+        this.slot = slot;
+    }
+
+    public String getSlot() {
+        return slot;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -65,10 +73,13 @@ public class MainActivity extends AppCompatActivity {
         String name = intent.getStringExtra("name");
         String username = intent.getStringExtra("username");
         String education = intent.getStringExtra("education");
+        String slot = intent.getStringExtra("slot");
 
         setName(name);
         setEducation(education);
         setUsername(username);
+        setSlot(slot);
+
 
     }
 

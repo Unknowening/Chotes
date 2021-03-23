@@ -12,57 +12,57 @@
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:text="Physics"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintBottom_toTopOf="@+id/buttonChemistry"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBiology"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonMath"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:text="Button"
+        android:text="math"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintStart_toEndOf="@+id/buttonSS"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLA" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonSS"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:text="Button"
+        android:text="Social Studies"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonMath"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonChemistry" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/buttonLA"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        android:text="Language Arts"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMath"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintStart_toEndOf="@+id/buttonChemistry"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBiology" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/buttonChemistry"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
+        android:text="Chemistry"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSS"
+        app:layout_constraintEnd_toStartOf="@+id/buttonLA"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonPhysics" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/buttonBiology"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        android:text="Biology"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonPhysics"
         app:layout_constraintTop_toTopOf="parent" />

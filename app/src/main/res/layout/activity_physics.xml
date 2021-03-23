@@ -6,4 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".Physics">
 
+    <Button
+        android:id="@+id/accelerationbutton"
+        android:layout_width="140dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="50dp"
+        android:text="Acceleration Notes"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/rotationbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/rotationbutton"
+        android:layout_width="139dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="50dp"
+        android:text="Rotation Notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/accelerationbutton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/columnOneCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Slot One"
+        app:layout_constraintEnd_toStartOf="@+id/columnTwoCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slotsTitle" />
+
+    <CheckBox
+        android:id="@+id/columnThreeCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Slot Three"
+        app:layout_constraintEnd_toStartOf="@+id/columnFourCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/columnOneCheck" />
+
+    <CheckBox
+        android:id="@+id/columnFourCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Slot Four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/columnThreeCheck"
+        app:layout_constraintTop_toBottomOf="@+id/columnTwoCheck" />
+
+    <CheckBox
+        android:id="@+id/columnTwoCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Slot Two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/columnOneCheck"
+        app:layout_constraintTop_toBottomOf="@+id/slotsTitle" />
+
+    <TextView
+        android:id="@+id/slotsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Select Slot to Save"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accelerationbutton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,46 @@
     tools:context=".Library">
 
     <Button
-        android:id="@+id/buttonDownloadOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:id="@+id/Slot1"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="88dp"
+        android:layout_marginBottom="108dp"
+        android:gravity="center"
+        android:text="Slot One"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/slot3"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="68dp"
+        android:layout_marginRight="88dp"
+        android:gravity="center"
+        android:text="Slot Three"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/slot4"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="Slot Four"
+        android:textSize="11sp" />
+
+    <Button
+        android:id="@+id/slot2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="88dp"
+        android:layout_marginBottom="108dp"
+        android:gravity="center"
+        android:text="Slot Two"
+        android:textSize="11sp" />
 </FrameLayout>

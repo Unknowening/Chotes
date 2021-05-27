@@ -122,7 +122,7 @@
             android:layout_marginTop="25dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/acceleration"
+            android:src="@drawable/differentials1"
             app:layout_constraintEnd_toStartOf="@+id/torque_home_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/calculus_spacer_bottom" />
@@ -135,10 +135,125 @@
             android:layout_marginTop="25dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/torque"
+            android:src="@drawable/vectors1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/acceleration_home_button"
             app:layout_constraintTop_toBottomOf="@+id/calculus_spacer_bottom" />
+
+        <View
+            android:id="@+id/chemistry_spacer_top"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#F4F4F4"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vector_home_button" />
+
+        <TextView
+            android:id="@+id/chemistry_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Chemistry"
+            android:textColor="@color/purple_500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chemistry_spacer_top" />
+
+        <View
+            android:id="@+id/chemistry_spacer_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#F4F4F4"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chemistry_title" />
+
+        <ImageButton
+            android:id="@+id/acid_home_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/reversibles"
+            app:layout_constraintEnd_toStartOf="@+id/vector_home_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chemistry_spacer_bottom" />
+
+
+        <ImageButton
+            android:id="@+id/reaction_home_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/reaction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/slope_home_button"
+            app:layout_constraintTop_toBottomOf="@+id/chemistry_spacer_bottom" />
+
+
+        <View
+            android:id="@+id/engineering_spacer_top"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#F4F4F4"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reaction_home_button" />
+
+        <TextView
+            android:id="@+id/engineering_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Engineering"
+            android:textColor="@color/purple_500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/engineering_spacer_top" />
+
+        <View
+            android:id="@+id/engineering_spacer_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#F4F4F4"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/engineering_title" />
+
+
+        <ImageButton
+            android:id="@+id/c3po_home_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/engineering1"
+            app:layout_constraintEnd_toStartOf="@+id/reaction_home_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/engineering_spacer_bottom" />
+
+
+        <ImageButton
+            android:id="@+id/c3po2_home_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tumblr_np83d1MFXb1upvldvo1_1280"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/acid_home_button"
+            app:layout_constraintTop_toBottomOf="@+id/engineering_spacer_bottom" />
+
 
         <Space
             android:layout_width="0dp"
@@ -147,15 +262,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vector_home_button" />
 
-        <Space
-            android:id="@+id/space"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="50dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

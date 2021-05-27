@@ -1,6 +1,6 @@
 package com.example.chotes;
 
-import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,19 +11,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 
 public class Login extends AppCompatActivity {
 
     Button bLogin;
     EditText eUsername, ePassword;
     TextView eRegisterNow;
+    boolean loginIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +28,7 @@ public class Login extends AppCompatActivity {
         ePassword = (EditText) findViewById(R.id.PasswordEdit);
         bLogin = (Button) findViewById(R.id.LoginButton);
         eRegisterNow = (TextView) findViewById(R.id.RegisterNowText);
+        loginIn = true;
 
         eRegisterNow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,47 +42,23 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final String username = eUsername.getText().toString();
-                final String password = ePassword.getText().toString();
+                if(loginIn){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+                    builder.setMessage("Login Failed")
+                            .setNegativeButton("Retry", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    loginIn = false;
+                                }
+                            })
+                            .create()
+                            .show();
+                } else {
+                    Intent registerIntent = new Intent(Login.this, MainActivity.class);
+                    Login.this.startActivity(registerIntent);
+                }
 
-                Response.Listener<String> stringListener = new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
 
-                            System.out.println(response);
-                            JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
-
-                            if (success){
-                                String name = jsonObject.getString("name");
-                                String username = jsonObject.getString("username");
-                                String education = jsonObject.getString("education");
-
-                                Intent intent = new Intent(Login.this, MainActivity.class);
-                                intent.putExtra("name", name);
-                                intent.putExtra("username", username);
-                                intent.putExtra("education", education);
-
-                                Login.this.startActivity(intent);
-
-                            } else {
-                                AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                                builder.setMessage("Login Failed")
-                                        .setNegativeButton("Retry", null)
-                                        .create()
-                                        .show();
-                            }
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                };
-
-                LoginRequest loginRequest = new LoginRequest(username, password, stringListener);
-                RequestQueue queue = Volley.newRequestQueue(Login.this);
-                queue.add(loginRequest);
 
             }
         });

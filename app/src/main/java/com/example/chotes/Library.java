@@ -10,10 +10,13 @@ import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,15 +73,25 @@ public class Library extends Fragment {
         }
     }
 
+    ImageButton bThree;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        MainActivity activity = (MainActivity) getActivity();
-        String slot = activity.getSlot();
-
         View view = inflater.inflate(R.layout.fragment_library, container, false);
         final ImageButton bOne = view.findViewById(R.id.acceleration_library_button);
+        final ImageButton bTwo = view.findViewById(R.id.add_button);
+        bThree = view.findViewById(R.id.diff_library_button);
+
+        bTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("*/*");
+                startActivityForResult(intent, 1);
+            }
+        });
 
         bOne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +102,14 @@ public class Library extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && data != null){
+            bThree.setImageDrawable(ContextCompat.getDrawable(getActivity(), R.drawable.differentials2));
+        }
     }
 
     private void startDownloading() {

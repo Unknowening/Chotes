@@ -1,15 +1,18 @@
 package com.example.chotes;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +27,7 @@ public class Profile extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     Button bLogOut;
-    EditText eUsername, eName, eEducation;
+    ImageView profilePic;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -67,20 +70,18 @@ public class Profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        MainActivity activity = (MainActivity) getActivity();
-        String name = activity.getName();
-        String education = activity.getEducation();
-        String username = activity.getUsername();
-
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
-        eUsername = (EditText) view.findViewById(R.id.UsernameEdit);
-        eName = (EditText) view.findViewById(R.id.NameEdit);
-        eEducation = (EditText) view.findViewById(R.id.EducationEdit);
         bLogOut = (Button) view.findViewById(R.id.LogoutButton);
+        profilePic = (ImageView) view.findViewById(R.id.accountImage);
 
-        eName.setText("Name: " + name);
-        eEducation.setText("Education: " + education);
-        eUsername.setText("Username: " + username);
+        profilePic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intent, 1);
+            }
+        });
+
 
         bLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,5 +92,14 @@ public class Profile extends Fragment {
         });
 
         return view;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && data != null){
+            Uri image = data.getData();
+            profilePic.setImageURI(image);
+        }
     }
 }

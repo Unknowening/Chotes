@@ -14,27 +14,26 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
 
-public class Register extends AppCompatActivity {
+public class Forget extends AppCompatActivity {
 
-    Button bRegister;
-    EditText eUsername, ePassword, eName, eEducation;
+    Button bReset;
+    EditText eUsername, ePassword, ePassword2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_forget);
 
         eUsername = (EditText) findViewById(R.id.UsernameEdit);
-        ePassword = (EditText) findViewById(R.id.repeatPassword);
-        eName = (EditText) findViewById(R.id.NameEdit);
-        eEducation = (EditText) findViewById(R.id.EducationEdit);
-        bRegister = (Button) findViewById(R.id.registerButton);
+        ePassword = (EditText) findViewById(R.id.newPasswordEdit);
+        ePassword2 = (EditText) findViewById(R.id.repeatNewPassword);
+        bReset = (Button) findViewById(R.id.resetButton);
 
-        bRegister.setOnClickListener(new View.OnClickListener() {
+        bReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
-                builder.setMessage("Registered")
+                AlertDialog.Builder builder = new AlertDialog.Builder(Forget.this);
+                builder.setMessage("Reset")
                         .setNegativeButton("Back", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -43,8 +42,6 @@ public class Register extends AppCompatActivity {
                         })
                         .create()
                         .show();
-
-
             }
         });
     }

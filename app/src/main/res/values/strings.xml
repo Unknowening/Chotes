@@ -13,4 +13,34 @@
     <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_physics">Physics</string>
     <string name="title_activity_AccelerationPopup">AccelerationPopup</string>
+    <string name="title_activity_report">Report</string>
+    <string name="title_activity_comment">Comments</string>
+    <string name="action_search">Search</string>
+
+    <string-array name="profiles">
+        <item>Jack Clearance</item>
+        <item>Devonte Smith</item>
+        <item>Josh Davis</item>
+    </string-array>
+
+    <string-array name="profiles2">
+        <item>Jack Clearance</item>
+        <item>Devonte Smith</item>
+        <item>Josh Davis</item>
+        <item>Jeff Charles</item>
+    </string-array>
+
+    <string-array name="profile_comments">
+        <item>Really great notes, really helped me \nunderstand the basics before moving on to\n projectile motion.</item>
+        <item>This made physics easier. I cannot learn\n in class.</item>
+        <item>Thanks, Now, I will get an A on my test.</item>
+    </string-array>
+
+    <string-array name="profile_comments2">
+        <item>Really great notes, really helped me \nunderstand the basics before moving on to\n projectile motion.</item>
+        <item>This made physics easier. I cannot learn\n in class.</item>
+        <item>Thanks, Now, I will get an A on my test.</item>
+        <item>Thanks</item>
+    </string-array>
+
 </resources>

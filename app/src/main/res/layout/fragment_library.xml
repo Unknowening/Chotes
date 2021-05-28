@@ -1,51 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Library">
+    android:fillViewport="true"
+    >
 
-    <Button
-        android:id="@+id/Slot1"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginRight="88dp"
-        android:layout_marginBottom="108dp"
-        android:gravity="center"
-        android:text="Slot One"
-        android:textSize="11sp" />
+        tools:context=".Home"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/slot3"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="68dp"
-        android:layout_marginRight="88dp"
-        android:gravity="center"
-        android:text="Slot Three"
-        android:textSize="11sp" />
 
-    <Button
-        android:id="@+id/slot4"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="88dp"
-        android:layout_marginTop="68dp"
-        android:gravity="center"
-        android:text="Slot Four"
-        android:textSize="11sp" />
+        <FrameLayout
+            android:id="@+id/favorites_frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="#DADADA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/slot2"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="88dp"
-        android:layout_marginBottom="108dp"
-        android:gravity="center"
-        android:text="Slot Two"
-        android:textSize="11sp" />
-</FrameLayout>
+            <TextView
+                android:id="@+id/favorites_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#00CACACA"
+                android:text="Favorites"
+                android:textAlignment="center"
+                android:textColor="@color/purple_500"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/acceleration_library_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/acceleration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/favorites_frameLayout" />
+
+
+        <FrameLayout
+            android:id="@+id/uploads_frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="#DADADA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/acceleration_library_button">
+
+            <TextView
+                android:id="@+id/uploads_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#00CACACA"
+                android:text="My Uploads"
+                android:textColor="@color/purple_500"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/add_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/ic_menu_add" />
+
+        </FrameLayout>
+
+        <Space
+            android:id="@+id/space2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/c3po2_home_button" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

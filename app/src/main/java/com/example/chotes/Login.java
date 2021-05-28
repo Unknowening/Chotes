@@ -16,7 +16,7 @@ public class Login extends AppCompatActivity {
 
     Button bLogin;
     EditText eUsername, ePassword;
-    TextView eRegisterNow;
+    TextView eRegisterNow, eForget;
     boolean loginIn;
 
     @Override
@@ -25,15 +25,24 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         eUsername = (EditText) findViewById(R.id.UsernameEdit);
-        ePassword = (EditText) findViewById(R.id.PasswordEdit);
-        bLogin = (Button) findViewById(R.id.LoginButton);
+        ePassword = (EditText) findViewById(R.id.repeatPassword);
+        bLogin = (Button) findViewById(R.id.registerButton);
         eRegisterNow = (TextView) findViewById(R.id.RegisterNowText);
+        eForget = (TextView) findViewById(R.id.forgetText);
         loginIn = true;
 
         eRegisterNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent registerIntent = new Intent(Login.this, Register.class);
+                Login.this.startActivity(registerIntent);
+            }
+        });
+
+        eForget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registerIntent = new Intent(Login.this, Forget.class);
                 Login.this.startActivity(registerIntent);
             }
         });

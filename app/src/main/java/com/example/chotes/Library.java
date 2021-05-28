@@ -3,6 +3,7 @@ package com.example.chotes;
 import android.Manifest;
 import android.app.DownloadManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
@@ -17,6 +18,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 /**
@@ -76,30 +78,13 @@ public class Library extends Fragment {
         String slot = activity.getSlot();
 
         View view = inflater.inflate(R.layout.fragment_library, container, false);
-        final Button bDownloadOne = (Button) view.findViewById(R.id.Slot1);
+        final ImageButton bOne = view.findViewById(R.id.acceleration_library_button);
 
-        if (slot != null) {
-            System.out.println(slot);
-            bDownloadOne.setText(slot);
-        }
-
-        bDownloadOne.setOnClickListener(new View.OnClickListener() {
+        bOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-                    if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                            == PackageManager.PERMISSION_DENIED){
-
-                        String[] permission = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
-
-                        requestPermissions(permission, PERMISSION_STORAGE_CODE);
-
-                    } else {
-                        startDownloading();
-                    }
-                } else {
-                    startDownloading();
-                }
+                Intent intent = new Intent(getActivity(), AccelerationPopup.class);
+                startActivity(intent);
             }
         });
 
